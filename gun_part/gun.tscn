@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnf7enh1skfte"]
+
+[ext_resource type="PackedScene" uid="uid://bg4yf4wevxaim" path="res://gun_part/shot_part/shot.tscn" id="1_bbtm6"]
+[ext_resource type="Script" path="res://gun_part/code/gun.gd" id="1_wewrt"]
+
+[node name="gun" type="Node2D"]
+script = ExtResource("1_wewrt")
+
+[node name="shot" parent="." instance=ExtResource("1_bbtm6")]
+scale = Vector2(1, 1)

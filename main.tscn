@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wy0rsxwxqk8r"]
+
+[ext_resource type="PackedScene" uid="uid://dhsdrtiknjetp" path="res://player_part/player.tscn" id="1_mbh5a"]
+[ext_resource type="PackedScene" uid="uid://1cey43gv0o3b" path="res://aim_part/code/front_sight.tscn" id="2_n3g7u"]
+
+[node name="Main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_mbh5a")]
+
+[node name="front_sight" parent="." instance=ExtResource("2_n3g7u")]

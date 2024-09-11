@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djqlliae8iea"]
+
+[ext_resource type="Script" path="res://gun_part/shot_part/bullet_part/code/bullet.gd" id="1_kqoxu"]
+[ext_resource type="Texture2D" uid="uid://d14l1nr2jn736" path="res://icon.svg" id="2_ovdq4"]
+
+[node name="bullet" type="Node2D"]
+script = ExtResource("1_kqoxu")
+
+[node name="bullet_body" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ovdq4")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

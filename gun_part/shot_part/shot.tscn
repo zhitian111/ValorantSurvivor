@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg4yf4wevxaim"]
+
+[ext_resource type="Script" path="res://gun_part/shot_part/code/shot.gd" id="1_l8s4c"]
+[ext_resource type="Script" path="res://gun_part/shot_part/code/semi_automatically_timer.gd" id="2_htgkg"]
+[ext_resource type="Script" path="res://gun_part/shot_part/code/fully_automatically_timer.gd" id="3_dcbsa"]
+
+[node name="shot" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_l8s4c")
+
+[node name="semi-automatically_timer" type="Timer" parent="."]
+script = ExtResource("2_htgkg")
+
+[node name="fully_automatically_timer" type="Timer" parent="."]
+one_shot = true
+script = ExtResource("3_dcbsa")
+
+[connection signal="timeout" from="semi-automatically_timer" to="." method="_on_semiautomatically_timer_timeout"]
+[connection signal="timeout" from="fully_automatically_timer" to="." method="_on_fully_automatically_timer_timeout"]

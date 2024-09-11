@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://1cey43gv0o3b"]
+
+[ext_resource type="Texture2D" uid="uid://d14l1nr2jn736" path="res://icon.svg" id="1_4fana"]
+[ext_resource type="Script" path="res://aim_part/code/front_sight.gd" id="1_ehveg"]
+[ext_resource type="Script" path="res://aim_part/code/front_sight_body.gd" id="2_dwulo"]
+
+[node name="front_sight" type="Node2D"]
+script = ExtResource("1_ehveg")
+
+[node name="front_sight_body" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4fana")
+script = ExtResource("2_dwulo")
